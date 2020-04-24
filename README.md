@@ -35,10 +35,10 @@ Due to the time-sequential nature of the board state, we will encode the board o
 
 `Board` object structure:
 - `period`: int ~ the length of repeatition
-- `starting stage`: State ~ the very initial configuration of the board, specified by the user
-- `non-periodic stage`: ordered list of States ~ the first State in this list represents the State of board initially specified by the user
-- `periodic state`: ordered list of States ~ guarantees that the size equals to `period`. Also ensures that the last State in this list will evolve into the first State in this list (cyclic nature)
+- `starting state`: State ~ the very initial configuration of the board, specified by the user
+- `non-periodic states`: ordered list of States ~ the first State in this list represents the State of board initially specified by the user
+- `periodic states`: ordered list of States ~ guarantees that the size equals to `period`. Also ensures that the last State in this list will evolve into the first State in this list (cyclic nature)
+- function interfaces:
+    - `constructor`: builds the `Board` object by filling in `starting stage`, leaving everything else the same. 
+    - `evolve`: calculate the `non-periodic states` and `periodic staes` based on the `starting state`, once the `periodic states` is determined, fill in `period` value as well.
 
-function interfaces:
-- constructor: builds the `Board` object by filling in `starting stage`, leaving everything else the same. 
-- 
